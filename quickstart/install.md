@@ -106,7 +106,9 @@ sudo lainctl node add -p playbooks {{ hostname }}:{{ hostname }}
 ```
 
 ## 云服务器
+
 ### 环境依赖
+
 * CentOS 7.2
 * NTP 服务保证节点间时间一致
 * 需要能访问到可用的 yum 源（包括 epel）

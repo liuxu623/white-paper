@@ -13,7 +13,7 @@
 请参考 https://docs.docker.com/engine/installation/ 安装 docker >= 1.12。
 
 安装好之后，请参考 https://docs.docker.com/registry/insecure/ 将 `registry.lain.local` 添加进
-docker daemon 的 insecure-registries 选项。例如，在 Linux 上，可以将 `/etc/docker/daemon.json` 改为：
+docker daemon 的 `insecure-registries` 选项。例如，在 Linux 上，可以将 `/etc/docker/daemon.json` 改为：
 
 ```
 {
@@ -21,23 +21,21 @@ docker daemon 的 insecure-registries 选项。例如，在 Linux 上，可以�
 }
 ```
 
-## 安装与配置 lain-sdk 和 lain-cli
+> 在 macOS 上，请将 `/var/folders` 加入 `File Sharing` 配置。
+
+## 安装与配置 lain-cli
 
 ```
-pip install git+https://github.com/laincloud/entry.git
-pip install git+https://github.com/laincloud/lain-sdk.git
-pip install git+https://github.com/laincloud/lain-cli.git
+pip install --process-dependency-links git+https://github.com/laincloud/lain-cli.git
 ```
 
-> 推荐使用 [virtualenv](https://virtualenv.pypa.io/en/stable/) 安转这 3 个 python 包，即：
+> 推荐使用 [virtualenv](https://virtualenv.pypa.io/en/stable/) 安装这个 python 包，即：
 >
 > ```
 > pip install virtualenv  # 安装 virtualenv
 > virtualenv lain  # lain 是虚拟环境的名字，也可以取其他名字
 > source lain/bin/activate  # 激活 lain 虚拟环境
-> pip install git+https://github.com/laincloud/entry.git
-> pip install git+https://github.com/laincloud/lain-sdk.git
-> pip install git+https://github.com/laincloud/lain-cli.git
+> pip install --process-dependency-links git+https://github.com/laincloud/lain-cli.git
 > deactivate  # 退出 lain 虚拟环境
 > ```
 >
